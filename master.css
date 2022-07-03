@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@300;400;600&family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: inter, Lexend Deca, sans-serif;
+}
+body {
+  height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  height: auto;
+  background-color: hsl(244, 38%, 16%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.im-mobile {
+  display: none;
+}
+.img {
+  background-color: hsl(277, 64%, 61%);
+  position: relative;
+  background-size: cover;
+}
+.card {
+  margin: 50px;
+}
+.footer {
+  height: auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+}
+img {
+  opacity: 60%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+h2,
+h3 {
+  color: hsl(0, 0%, 100%);
+}
+span {
+  color: hsl(277, 64%, 61%);
+}
+.card > p {
+  margin: 30px 0 40px;
+}
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+@media (max-width: 375px) {
+  .im-mobile {
+    display: block;
+  }
+  .im-desktop {
+    display: none;
+  }
+  .container {
+    height: 90%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "back" "cont";
+    margin: 40px 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .card {
+    margin: 20px 30px;
+    text-align: center;
+    grid-area: cont;
+  }
+  .img {
+    grid-area: back;
+    height: 100%;
+    width: 100%;
+  }
+  .footer {
+    height: auto;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "a1" "b1" "a2" "b2" "a3" "b3";
+    grid-gap: 10px;
+  }
+  .a {
+    grid-area: a1;
+  }
+  .b {
+    grid-area: a2;
+  }
+  .c {
+    grid-area: a3;
+  }
+  .d {
+    grid-area: b1;
+  }
+  .e {
+    grid-area: b2;
+  }
+  .f {
+    grid-area: b3;
+  }
+}
